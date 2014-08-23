@@ -1,10 +1,24 @@
 .header {
-
-}
-.logo {
-  margin: -100px 0 0 -84px;
-  @include position(absolute, 50% 0 0 50%);
-  img {
-
+  .logo{
+    height: 108px;
+    width: 480px;
+    margin: 20px auto;
+    font-size: 3em;
+    
+    .orange{
+      color: $orange;
+    }
+    
+    .blue{
+      color: $blue;
+    }
+    a, a:hover{
+      text-decoration: none;
+    }
+  }
+  
+  .top-bar{
+    height: 20px;
+    background: $blue;
   }
 }

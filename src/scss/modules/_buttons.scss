@@ -1,0 +1,13 @@
+@mixin mcButton($color){
+  clear: both;
+  height: 35px;
+  color: $color;
+  cursor: pointer;
+  max-width: 200px;
+  font-weight: 200;
+  line-height: 29px;
+  font-size: 1.25em;
+  text-align: center;
+  border: 3px $color solid;
+  text-transform: uppercase;
+}

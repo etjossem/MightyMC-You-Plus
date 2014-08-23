@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>FireShell by @toddmotto</title>
+    <title>Mighty-MC</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -11,6 +11,13 @@
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
     <script src="assets/components/modernizr.js"></script>
 
@@ -18,22 +25,159 @@
   <body>
 
     <header class="header" role="banner">
+      <div class="top-bar"></div>
       <div class="logo">
         <a href="/">
-          <img src="assets/img/logo.svg" alt="Logo">
+          <img src="assets/img/logo.png"/ >
         </a>
       </div>
       <nav class="nav" role="navigation">
-        <ul>
-          <li>
-            <a href="/"></a>
-          </li>
-        </ul>
+        <div class="entire-menu">
+          <input type="checkbox" id="change-hamburguer" />
+          <a class="hamburguer" href="#">
+            <span></span>
+            <label for="change-hamburguer"></label>
+          </a>
+          <div class="menu">
+            <a href="#video">video</a>
+            <a href="#shine">shine</a>
+            <a href="#share">share</a>
+            <a href="#impression">impression</a>
+            <a href="#visibility">visibility</a>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main class="main" role="main">
+      <div class="container">
+        <div class="col-md-12">
 
+          <div id="video" class="video-flex">
+            <iframe class="video" id="video" src="//www.youtube.com/embed/T8K6rvfM93c?enablejsapi=1&html5=1?feature=oembed;wmode=opaque;theme=dark;showinfo=0;autoplay=0;loop=1;autohide=1;modestbranding=1;rel=0;playsinline=1;" width="357" height="200" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            <iframe class="video" id="video" src="//www.youtube.com/embed/vby0TRv034g?enablejsapi=1&html5=1?feature=oembed;wmode=opaque;theme=dark;showinfo=0;autoplay=0;loop=1;autohide=1;modestbranding=1;rel=0;playsinline=1;" width="357" height="200" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            <iframe class="video" id="video" src="//www.youtube.com/embed/0ptMd3ioGdY?enablejsapi=1&html5=1?feature=oembed;wmode=opaque;theme=dark;showinfo=0;autoplay=0;loop=1;autohide=1;modestbranding=1;rel=0;playsinline=1;" width="357" height="200" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            <iframe class="video" id="video" src="//www.youtube.com/embed/lDI5k1-gfbE??enablejsapi=1&html5=1?feature=oembed;wmode=opaque;theme=dark;showinfo=0;autoplay=0;loop=1;autohide=1;modestbranding=1;rel=0;playsinline=1;" width="357" height="200" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            <iframe class="video" id="video" src="//www.youtube.com/embed/sTf5xLgRVrs??enablejsapi=1&html5=1?feature=oembed;wmode=opaque;theme=dark;showinfo=0;autoplay=0;loop=1;autohide=1;modestbranding=1;rel=0;playsinline=1;" width="357" height="200" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            <iframe class="video" id="video" src="//www.youtube.com/embed/F-lE6LEI4_k?enablejsapi=1&html5=1?feature=oembed;wmode=opaque;theme=dark;showinfo=0;autoplay=0;loop=1;autohide=1;modestbranding=1;rel=0;playsinline=1;" width="357" height="200" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
+          </div>
+        
+          
+          <div class="row">
+            <div class="video-desc col-lg-4 col-lg-offset-4 text-center">
+              A <span class="orange">you+</span><span class="blue">plus</span> video is a short, scripted (15-60 second), black and white video designed to show your personality and give information about what you do professionaly.
+            </div>
+            <div class="video-get-started">
+              Get Started <i class="fa fa-long-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="shine" class="shine-banner">
+        <div class="left">
+          <img class="envelope" src="assets/img/envelop.png" />
+        </div>
+        <div class="right">
+          <h2>Let Yourself Shine</h2>
+           A video email signature lets the world see you everywhere and every time you communicate online. 
+        </div>
+      </div>
+      
+      <div class="custom">
+        <div class="left">
+          <img src="assets/img/video.png" />
+        </div>
+        <div class="right">
+          <h2>You'll get your <br> own custom page.</h2>
+          We'll host your video and give you the linksyou need to show your video everywhere and anywhere as much as you want.
+          
+          <div class="custom-get-started">
+            Get Started <i class="fa fa-long-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="share" class="who-banner">
+        <div class="left">
+          <img class="chat" src="assets/img/chat.png" />
+        </div>
+        <div class="right">
+          <h2>Share Who you are</h2>
+           Use your you+plus video as a custom email signature, on your resume, on PDFs, Word docs, webpages, Linkedin, and all your other social profiles 
+        </div>
+      </div>
+
+      <div class="example">
+        <img src="assets/img/example.png" />
+      </div>
+
+      <div id="immpression" class="row">
+        <div class="impression col-lg-4 col-lg-offset-4 text-center">
+          <h2>make an impression</h2>
+          Use your <span class="orange">you+</span><span class="blue">plus</span> video as a custom email signature, to enhance your social media profiles, in PDFs, on resume... the list goes on!  They're also a powerful way to introduce your team on your team page of your website.
+        </div>
+        <div class="impression-btn">
+          Get Started <i class="fa fa-long-arrow-right"></i>
+        </div>
+      </div>
+
+      <div id="visibility" class="visibility-banner">
+        <div class="left">
+          <img class="visibility" src="assets/img/53x.png" />
+        </div>
+        <div class="right">
+          <h2>increase your visibility</h2>
+           Webpages with video are <strong>53x more likely</strong> to be found in a Google search than websites without video.
+        </div>
+      </div>
+      
+      <div class="trust">
+        <div class="left">
+          <img src="assets/img/guy.png" />
+        </div>
+        <div class="right">
+          <h2>You'll get your <br> own custom page.</h2>
+          We'll host your video and give you the linksyou need to show your video everywhere and anywhere as much as you want.
+          
+          <div class="trust-get-started">
+            Get Started <i class="fa fa-long-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quotes">
+        <div class="quote">
+          <p>Mike and Philip were awesome! The video really helps me get out my message.</p>
+          <span class="cite">Jimbo</span>
+        </div>
+        <div class="quote">
+          <p>The video really improved my gator-milking business. Now I have five stores and four fingers!</p>
+          <span class="cite">James</span>
+        </div>
+        <div class="quote">
+          <p>The video has helped me improve my business by 153,000%! Thanks, Mike, you were great!</p>
+          <span class="cite">Jim Bob</span>
+        </div>
+      </div>
+            
+      <div class="row">
+        <div class="connect col-lg-4 col-lg-offset-4 text-center">
+          <h2>Let's Connect!</h2>
+          <a href="tel:415-309-4560">415-309-4560</a> / <a href="tel:415-252-8090">415-252-8090</a> | <a href="info@youplus">info@youplus.biz</a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="social">
+          <img src="assets/img/fb.png" />
+          <img src="assets/img/twitter.png" />
+          <img src="assets/img/linkedin.png" />
+          <img src="assets/img/google.png" />
+          <img src="assets/img/tumble.png" />
+          <img src="assets/img/youtube.png" />
+        </div>
+      </div>
+      
+      
     </main>
 
     <aside class="sidebar" role="complementary">
@@ -41,10 +185,14 @@
     </aside>
 
     <footer class="footer" role="contentinfo">
-
+      <div class="container">
+        <div class="col-md-12">
+        </div>
+      </div>
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/js/scripts.min.js"></script>
 
