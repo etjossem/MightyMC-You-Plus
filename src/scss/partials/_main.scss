@@ -1,10 +1,27 @@
 *, body, html{
   font-family: 'Open Sans', sans-serif;
 }
+*, *:after, *:before { box-sizing: border-box; }
+  .clearfix:before, .clearfix:after { content: ''; display: table; }
+  .clearfix:after { clear: both; }
+
+.arrow-right{
+  float: right;
+  margin-right: 0.5em;
+  font-size: 1.3em;
+  line-height: 30px !important;
+}
 
 .main {
   .container{
-  
+
+    h2.title{
+      color: #ababab;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 100;
+    }
+
     .callout{
       width: 100%;
       color: #fff;
@@ -17,12 +34,12 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-    
+
     .video-flex{
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 40px;
-      
+
       .video{
         flex-grow: 1;
         height: 200px;
@@ -31,36 +48,44 @@
         background: #000;
       }
     }
-    
+
     .video-desc{
       color: #ccc;
       font-size: 0.85em;
       text-align: center;
       margin-bottom: 40px;
-      
+
       .orange{
         color: $orange;
       }
-      
       .blue{
         color: $blue;
       }
     }
-    
-    .video-get-started{ 
+
+    .video-get-started{
       @include mcButton($orange);
       margin: 0 auto;
     }
   }
+}
+
+
+.main{
+  #share{
+    margin-bottom: 40px;
+  }
+
   .shine-banner, .visibility-banner, .who-banner{
     height: 165px;
     background: $orange;
     padding: 2em;
     display: flex;
-    margin-top: 20px;
-    
+    margin-top: 40px;
+    margin-bottom: 40px;
+
     .envelope{
-      width: 90px;
+      width: 100px;
       float: right;
       margin-right: 2em;
     }
@@ -101,7 +126,9 @@
   .who-banner{
     background: $blue;
   }
+}
 
+.main{
   .impression{
     color: #ccc;
     font-size: 0.85em;
@@ -114,11 +141,11 @@
       color: #333;
     }
   }
-  .impression-btn{ 
+  .impression-btn{
     @include mcButton($orange);
     margin: 0 auto;
   }
-  
+
   .custom, .trust{
     margin-top: 40px;
     display: flex;
@@ -128,7 +155,7 @@
     .left{
       width: 60%;
       padding-right: 6em;
-      
+
       img{
         float: right;
         width: 50%;
@@ -138,11 +165,12 @@
       width: 40%;
       padding-right: 10em;
     }
-    .custom-get-started{ 
+
+    .custom-get-started{
       margin-top: 40px;
       @include mcButton($blue);
     }
-    .trust-get-started{ 
+    .trust-get-started{
       margin-top: 40px;
       @include mcButton($blue);
     }
@@ -150,14 +178,14 @@
   .trust{
     margin-bottom: 40px;
   }
-  
+
   .quotes{
     background: #ccc;
     display: flex;
     justify-content: space-between;
     padding: 0 22.5em;
     position: relative;
-    
+
     .quote{
       background: #fff;
       width: 300px;
@@ -165,24 +193,31 @@
       margin: 20px 0;
       margin-bottom: 60px;
       position: relative;
-      
+
       &:before{
-        content: '"';
+        content: '';
+        width: 45px;
+        height: 33px;
         position: absolute;
-        top: 5px;
-        left: 15px;
-        color: $blue;
+        top: 10px;
+        left: 10px;
         font-size: 3em;
+        background: url('../img/QuoteLeft.png') no-repeat;
+        background-size: 80%;
       }
       &:after{
-        content: '"';
+        content: '';
+        width: 45px;
+        height: 33px;
         position: absolute;
-        bottom: -5px;
-        right: 15px;
-        color: $blue;
+        bottom: 25px;
+        right: 10px;
         font-size: 3em;
+        background: url('../img/QuoteRight.png') no-repeat;
+        background-size: 80%;
       }
-      
+
+
       .cite{
         color: $blue;
         font-size: 0.8em;
@@ -200,8 +235,8 @@
         left: 0;
         position: absolute;
       }
-        
-      
+
+
       p{
         margin: 2em 3em;
         text-align: center;
@@ -211,35 +246,439 @@
   .quotes:after{
     position: absolute;
     bottom: -20px;
-    left: 50%; 
+    left: 50%;
     content: "";
-    width: 0; 
-	height: 0; 
-    margin-left: -10px;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-	border-top: 20px solid #ccc;
+    width: 0;
+    height: 0;
+    margin-left: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #ccc;
   }
-  
+}
+
+.main{
   .connect{
     h2{
       text-transform: $blue;
       text-align: center;
       font-weight: 100;
     }
-    a, a:hover{
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    a:hover{
       text-decoration: none;
       color: #000;
     }
   }
-  
+
   .social{
     margin: 20px auto;
-    width: 270px;
-  } 
-  
+    width: 289px;
+  }
+
+  .socialBtn{
+    width: 45px;
+    height: 45px;
+  }
+
   .example{
     width: 80%;
     margin: 0 auto;
+  }
+
+
+  .simform {
+    position: relative;
+    margin: 0 auto;
+    padding: 2em 0;
+    max-width: 860px;
+    width: 100%;
+    text-align: left;
+    font-size: 2.5em;
+  }
+
+  .simform .submit {
+    display: none;
+  }
+
+  /* Question list style */
+  .simform ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    transition: height 0.4s;
+  }
+
+  .simform ol:before {
+    content: '';
+    background-color: rgba(0,0,0,0.1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.35em;
+  }
+
+  .questions li {
+      z-index: 100;
+      position: relative;
+      visibility: hidden;
+      height: 0;
+      transition: visibility 0s 0.4s, height 0s 0.4s;
+  }
+
+  .questions li.current,
+  .no-js .questions li {
+      visibility: visible;
+      height: auto;
+      transition: none;
+  }
+
+  /* Labels */
+  .questions li > span {
+    display: block;
+    overflow: hidden;
+  }
+
+  .questions li > span label {
+    display: block;
+    transition: transform 0.4s;
+    transform: translateY(-100%);
+  }
+
+  .questions li.current > span label,
+  .no-js .questions li > span label {
+    transition: none;
+    transform: translateY(0);
+  }
+
+  .show-next .questions li.current > span label {
+    animation: moveUpFromDown 0.4s both;
+  }
+}
+
+.main{
+  @keyframes moveUpFromDown {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  /* Input field */
+  .questions input {
+    display: block;
+    margin: 0.3em 0 0 0;
+    padding: 0.5em 1em 0.5em 0.7em;
+    width: calc(100% - 2em);
+    border: none;
+    background: transparent;
+    color: rgba(0,0,0,0.8);
+    font-size: 1em;
+    line-height: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .questions .current input,
+  .no-js .questions input {
+    opacity: 1;
+  }
+
+  .questions input:focus,
+  .simform button:focus {
+    outline: none;
+  }
+
+  /* Next question button */
+  .next {
+    position: absolute;
+    right: 0;
+    bottom: 2.75em; /* padding-bottom of form plus progress bar height */
+    display: block;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    border: none;
+    background: none;
+    color: $blue;
+    text-align: center;
+    opacity: 0;
+    z-index: 100;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateX(-20%);
+    pointer-events: none;
+  }
+
+  .next:hover {
+    color: $blue;
+  }
+
+  .next::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 30px;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .next.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+}
+
+.main{
+  /* Progress bar */
+  .simform .progress {
+    width: 0%;
+    height: 0.15em;
+    background: $orange;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .simform .progress::before {
+    position: absolute;
+    top: auto;
+    width: 100%;
+    height: inherit;
+    background: rgba(0,0,0,0.05);
+    content: '';
+  }
+
+  /* Number indicator */
+  .simform .number {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    margin: 0.4em 0;
+    width: 3em;
+    font-weight: 700;
+    font-size: 0.4em;
+  }
+
+  .simform .number:after {
+    position: absolute;
+    left: 50%;
+    content: '/';
+    opacity: 0.4;
+    transform: translateX(-50%);
+  }
+
+  .simform .number span {
+    float: right;
+    width: 40%;
+    text-align: center;
+  }
+
+  .simform .number .number-current {
+    float: left;
+  }
+
+  .simform .number-next {
+    position: absolute;
+    left: 0;
+  }
+
+  .simform.show-next .number-current {
+    transition: transform 0.4s;
+    transform: translateY(-100%);
+  }
+
+  .simform.show-next .number-next {
+    -webkit-animation: moveUpFromDown 0.4s both;
+    animation: moveUpFromDown 0.4s both;
+  }
+
+  /* Error and final message */
+  .simform .error-message,
+  .simform .final-message {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .simform .error-message {
+    padding: 0.4em 3.5em 0 0;
+    width: 100%;
+    color: rgba(0,0,0,0.7);
+    font-style: italic;
+    font-size: 0.4em;
+  }
+
+  .final-message {
+    top: 50%;
+    left: 0;
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+
+  .error-message.show,
+  .final-message.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .final-message.show {
+    transition-delay: 0.5s;
+  }
+}
+
+.main{
+  /* No JS Fallback */
+  .no-js .simform {
+    font-size: 1.75em;
+  }
+
+  .no-js .questions li {
+    padding: 0 0 2em;
+  }
+
+  .no-js .simform .submit {
+    display: block;
+    float: right;
+    padding: 10px 20px;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.4);
+  }
+
+  .no-js .simform .controls {
+    display: none;
+  }
+
+  /* Remove IE clear cross */
+  input[type=text]::-ms-clear {
+    display: none;
+  }
+
+  /* Adjust form for smaller screens */
+  @media screen and (max-width: 44.75em) {
+    .simform {
+      font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 33.5625em) {
+    .simform {
+        font-size: 1.2em;
+      }
+  }
+
+  .codrops-header {
+    margin: 0 auto;
+    padding: 3em 1em;
+    text-align: center;
+    color: rgba(0,0,0,0.35);
+  }
+
+  .codrops-header h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.5em;
+  }
+
+  .codrops-header h1 span {
+    display: block;
+    padding: 0 0 0.6em 0.1em;
+    font-size: 0.6em;
+    opacity: 0.7;
+  }
+
+  /* To Navigation Style */
+  .codrops-top {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.69em;
+    line-height: 2.2;
+  }
+
+  .codrops-top a {
+    display: inline-block;
+    padding: 0 1em;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .codrops-top span.right {
+    float: right;
+  }
+
+  .codrops-top span.right a {
+    display: block;
+    float: left;
+  }
+
+  section {
+    padding: 2em 2em 4em;
+    background: #fff;
+    text-align: center;
+  }
+
+  section.related {
+    padding: 3em 1em 4em;
+    background: $orange;
+    color: rgba(0,0,0,0.4);
+    font-size: 1.5em;
+  }
+
+  .related > a {
+    max-width: 80%;
+    border: 2px solid rgba(0,0,0,0.3);
+    display: inline-block;
+    text-align: center;
+    margin: 20px 10px;
+    padding: 25px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  .related a:hover {
+    border-color: rgba(0,0,0,0.6);
+  }
+
+  .related a img {
+    max-width: 100%;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+  }
+
+  .related a:hover img,
+  .related a:active img {
+    opacity: 1;
+  }
+
+  .related a h3 {
+    margin: 0;
+    padding: 0.5em 0 0.3em;
+    max-width: 300px;
+    font-weight: 400;
+    font-size: 0.75em;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 44.75em) {
+      section { padding: 1em 2em; }
+  }
+
+  @media screen and (max-width: 25em) {
+      .codrops-header { font-size: 0.8em; }
+      section.related { font-size: 1.2em; }
+      .codrops-icon span { display: none; }
   }
 }
